@@ -10,7 +10,7 @@ printFrame [h, w] idx
     | idx == h = putStrLn ""
     | otherwise = do
         case idx of i | i == 0 || i == h - 1 -> putStrLn $ BS.unpack $ BS.replicate w '#'
-                      | otherwise -> putStrLn $ "#" ++ (BS.unpack $ BS.replicate (w - 2) '.') ++ "#"
+                      | otherwise -> putStrLn $ "#" ++ BS.unpack (BS.replicate (w - 2) '.') ++ "#"
         printFrame [h, w] (idx + 1)
 
 printFrameN [] = return ()

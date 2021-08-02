@@ -22,4 +22,5 @@ main = do
         new <- readArray arr (i, j, k)
         putStr $ show new
         if k == 9 then putStrLn "" else putStr " "
+
     if i == 3 then return () else putStrLn "####################"
